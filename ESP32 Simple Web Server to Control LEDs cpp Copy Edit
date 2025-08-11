@@ -3,3 +3,7 @@
 const char* ssid = "YOUR_WIFI";
 const char* password = "YOUR_PASS";
 
+WiFiServer server(80);
+
+#define LED_PIN 2
+
