@@ -10,4 +10,9 @@ WiFiServer server(80);
 void setup() {
   Serial.begin(115200);
   pinMode(LED_PIN, OUTPUT);
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
 
