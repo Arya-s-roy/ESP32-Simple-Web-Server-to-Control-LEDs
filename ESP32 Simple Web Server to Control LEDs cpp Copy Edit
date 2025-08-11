@@ -28,6 +28,12 @@ void loop() {
     if (request.indexOf("/LED=ON") != -1) {
       digitalWrite(LED_PIN, HIGH);
     }
+    if (request.indexOf("/LED=OFF") != -1) {
+      digitalWrite(LED_PIN, LOW);
+    }
+
+    client.println("HTTP/1.1 200 OK");
+
 
 
 
