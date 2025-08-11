@@ -39,6 +39,11 @@ void loop() {
     client.println("<h1>ESP32 LED Control</h1>");
     client.println("<a href=\"/LED=ON\">Turn On</a><br>");
     client.println("<a href=\"/LED=OFF\">Turn Off</a>");
+    client.println("</body></html>");
+    delay(1);
+  }
+}
+
 
 
 
