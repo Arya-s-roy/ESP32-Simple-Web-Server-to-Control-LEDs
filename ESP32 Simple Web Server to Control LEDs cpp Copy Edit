@@ -25,6 +25,9 @@ void loop() {
   if (client) {
     String request = client.readStringUntil('\r');
     client.flush();
+    if (request.indexOf("/LED=ON") != -1) {
+      digitalWrite(LED_PIN, HIGH);
+    }
 
 
 
