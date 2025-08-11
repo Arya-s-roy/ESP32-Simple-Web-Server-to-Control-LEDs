@@ -16,3 +16,13 @@ void setup() {
     Serial.print(".");
   }
 
+  server.begin();
+  Serial.println(WiFi.localIP());
+}
+
+void loop() {
+  WiFiClient client = server.available();
+  if (client) {
+    String request = client.readStringUntil('\r');
+    client.flush();
+
